@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="./shopping.css">
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="main">
+        <nav class="sticky-top">
+            <div class="row text-center fs-3">
+                <div id="btn1" class="col-4 py-3" style="background-color: #F7D1C6; color: white;"><span>Bags</span></div>
+                <div id="btn2" class="col-4 py-3" style="box-shadow: -2px 2px 5px black; color: #F7D1C6; background-color: #ffffff;"><span>Clothes</span></div>
+                <div id="btn3" class="col-4 py-3" style="box-shadow: -2px 2px 5px black; color: #F7D1C6; background-color: #ffffff;"><span>Perfumes</span></div>
+            </div>
+        </nav>
+        <div class="arrow">
+            <a class="nav-link sticky-top" href="./home .html">
+                <i class="fa-solid fa-arrow-left fs-3 text-center"></i>
+            </a>
+            <a class="nav-link mt-5 sticky-top" href="./cart.html">
+                <i class="fa-solid fa-cart-shopping fs-2 text-center" ></i>
+            </a>
+        </div>
+    
+        <section id="bagsection" style="background-color: #F7D1C6;">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="row">
+                        <div class="col-lg-5 py-3" style="background-color: #7A7519;">
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                        </div>
+                        <div class="col-lg-7">                   
+                            <div class="row bg-white text-center">
+                                <div class="col-12  text-center" style="margin-top: auto;"><h1 style="font-weight: 900; color: #7A7519;" class="pt-5">Christmas Promotion</h1></div>
+                                
+                                    <div class="col-3 mt-5"><img class="w-100"  src="./img/tree.png" alt=""></div>
+                                    <div class="col-6 mt-5">
+                                        <span class=" col-12" style="color: #7A7519; font-size: 60px;">20%Off</span>
+                                        <button class="col-12 w-50 fs-5 text-white p-2 my-3" style="background-color: #7A7519; border: none; border-radius: 15px;">Buy Now!</button>
+                                    </div>
+                                    <div class="col-3 mt-5"><img class="w-100" src="./img/tree.png" alt=""></div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-box w-100">
+                    <div class="row m-auto">
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100" style="height: 300px;" src="./img/Bround.jpg" alt="">
+                                <h4 class="text-center mt-2">Bround Leather Bag</h4>
+                                <span class="fs-5 my-2">$1200</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Bround Leather Bag' ,1200, './img/Bround.jpg')">
+                                buy
+                            </button>
+    
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Lottie Shoulder.jpg" alt="">
+                                <h4 class="text-center mt-2">Lottie Shoulder</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Lottie Shoulder' ,1500, './img/Lottie Shoulder.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Way Beige.jpg" alt="">
+                                <h4 class="text-center mt-2">Way Beige</h4>
+                                <span class="fs-5 my-2">$3000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Way Beige' ,3000, './img/Way Beige.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/DeMellier.jpg" alt="">
+                                <h4 class="text-center mt-2">DeMellier</h4>
+                                <span class="fs-5 my-2">$5000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('DeMellier' ,5000, './img/DeMellier.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/High Street.jpg" alt="">
+                                <h4 class="text-center mt-2">High Street</h4>
+                                <span class="fs-5 my-2">$3000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('High Street' ,3000, './img/High Street.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/SLY 7.jpg" alt="">
+                                <h4 class="text-center mt-2">SLY.7</h4>
+                                <span class="fs-5 my-2">$5500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('SLY.7' ,5500, './img/SLY 7.jpg')">
+                                buy
+                            </button>
+                            
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/New Arrivals.jpg" alt="">
+                                <h4 class="text-center mt-2">New Arrivals</h4>
+                                <span class="fs-5 my-2">$5500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('New Arrivals' ,5500, './img/New Arrivals.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Markle.jpg" alt="">
+                                <h4 class="text-center mt-2">Markle</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Markle' ,1500, './img/Markle.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/WOMEN HANDBAGS.jpg" alt="">
+                                <h4 class="text-center mt-2">WOMEN HANDBAGS</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('WOMEN HANDBAGS' ,1500, './img/WOMEN HANDBAGS.jpg')">
+                                buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clothessection" style="background-color: #F7D1C6; display: none;">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="row">
+                        <div class="col-lg-5 py-3" style="background-color: #7A7519;">
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                        </div>
+                        <div class="col-lg-7">                   
+                            <div class="row bg-white text-center">
+                                <div class="col-12  text-center" style="margin-top: auto;"><h1 style="font-weight: 900; color: #7A7519;" class="pt-5">Christmas Promotion</h1></div>
+                                
+                                    <div class="col-3 mt-5"><img class="w-100"  src="./img/tree.png" alt=""></div>
+                                    <div class="col-6 mt-5">
+                                        <span class=" col-12" style="color: #7A7519; font-size: 60px;">50%Off</span>
+                                        <button class="col-12 w-50 fs-5 text-white p-2 my-3" style="background-color: #7A7519; border: none; border-radius: 15px;">Buy Now!</button>
+                                    </div>
+                                    <div class="col-3 mt-5"><img class="w-100" src="./img/tree.png" alt=""></div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-box w-100">
+                    <div class="row m-auto">
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100" style="height: 300px;" src="./img/Coquette cardi.jpg" alt="">
+                                <h4 class="text-center mt-2">Coquette cardi</h4>
+                                <span class="fs-5 my-2">$12000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Coquette cardi' ,12000, './img/Coquette cardi.jpg')">
+                                buy
+                            </button>
+    
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Cropped Sweater.jpg" alt="">
+                                <h4 class="text-center mt-2">Cropped Sweater</h4>
+                                <span class="fs-5 my-2">$15000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Cropped Sweater' ,15000, './img/Cropped Sweater.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress7.jpg" alt="">
+                                <h4 class="text-center mt-2">dress1</h4>
+                                <span class="fs-5 my-2">$30000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress1' ,30000, './img/dress7.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress2.jpg" alt="">
+                                <h4 class="text-center mt-2">dress2</h4>
+                                <span class="fs-5 my-2">$50000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress2' ,50000, './img/dress2.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress3.jpg" alt="">
+                                <h4 class="text-center mt-2">dress3</h4>
+                                <span class="fs-5 my-2">$30000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress3' ,30000, './img/dress3.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress4.jpg" alt="">
+                                <h4 class="text-center mt-2">dress4</h4>
+                                <span class="fs-5 my-2">$55000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress4' ,55000, './img/dress4.jpg')">
+                                buy
+                            </button>
+                            
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress5.jpg" alt="">
+                                <h4 class="text-center mt-2">dress5</h4>
+                                <span class="fs-5 my-2">$55000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress5' ,55000, './img/dress5.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress6.jpg" alt="">
+                                <h4 class="text-center mt-2">dress6</h4>
+                                <span class="fs-5 my-2">$15000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress6' ,15000, './img/dress6.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/dress1.jpg" alt="">
+                                <h4 class="text-center mt-2">dress7</h4>
+                                <span class="fs-5 my-2">$15000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('dress1' ,15000, './img/dress1.jpg')">
+                                buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="perfumsection" style="background-color: #F7D1C6; display: none;">
+            <div class="container">
+                <div class="row py-3">
+                    <div class="row">
+                        <div class="col-lg-5 py-3" style="background-color: #7A7519;">
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                            <h1 class="text-center" style="font-weight: 900; color: #ffffff; font-size: 80px;">SALE</h1>
+                        </div>
+                        <div class="col-lg-7">                   
+                            <div class="row bg-white text-center">
+                                <div class="col-12  text-center" style="margin-top: auto;"><h1 style="font-weight: 900; color: #7A7519;" class="pt-5">Christmas Promotion</h1></div>
+                                
+                                    <div class="col-3 mt-5"><img class="w-100"  src="./img/tree.png" alt=""></div>
+                                    <div class="col-6 mt-5">
+                                        <span class=" col-12" style="color: #7A7519; font-size: 60px;">10%Off</span>
+                                        <button class="col-12 w-50 fs-5 text-white p-2 my-3" style="background-color: #7A7519; border: none; border-radius: 15px;">Buy Now!</button>
+                                    </div>
+                                    <div class="col-3 mt-5"><img class="w-100" src="./img/tree.png" alt=""></div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-box w-100">
+                    <div class="row m-auto">
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100" style="height: 300px;" src="./img/CHANEL N°5.jpg" alt="">
+                                <h4 class="text-center mt-2">CHANEL N°5</h4>
+                                <span class="fs-5 my-2">$12000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('CHANEL N°5' ,12000, './img/CHANEL N°5.jpg')">
+                                buy
+                            </button>
+    
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Co Co CHANEL.jpg" alt="">
+                                <h4 class="text-center mt-2">Co Co CHANEL</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Co Co CHANEL' ,1500, './img/Co Co CHANEL.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/DIOR Miss.jpg" alt="">
+                                <h4 class="text-center mt-2">DIOR Miss</h4>
+                                <span class="fs-5 my-2">$3000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('DIOR Miss' ,3000, './img/DIOR Miss.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Dior Sauvage.jpg" alt="">
+                                <h4 class="text-center mt-2">Dior Sauvage</h4>
+                                <span class="fs-5 my-2">$5000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Dior Sauvage' ,5000, './img/Dior Sauvage.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Hypnotic Poison.jpg" alt="">
+                                <h4 class="text-center mt-2">Hypnotic Poison</h4>
+                                <span class="fs-5 my-2">$3000</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Hypnotic Poison' ,3000, './img/Hypnotic Poison.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Jean Paul Gaultier For Men.jpg" alt="">
+                                <h4 class="text-center mt-2">Jean Paul Gaultier For Men</h4>
+                                <span class="fs-5 my-2">$5500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Jean Paul Gaultier For Men' ,5500, './img/Jean Paul Gaultier For Men.jpg')">
+                                buy
+                            </button>
+                            
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Jean Paul Gaultier Fro Women.jpg" alt="">
+                                <h4 class="text-center mt-2">Jean Paul Gaultier Fro Women</h4>
+                                <span class="fs-5 my-2">$5500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Jean Paul Gaultier Fro Women' ,5500, './img/Jean Paul Gaultier Fro Women.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/Versace Eros.jpg" alt="">
+                                <h4 class="text-center mt-2">Versace Eros</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('Versace Eros' ,1500, './img/Versace Eros.jpg')">
+                                buy
+                            </button>
+                        </div>
+                        <div class="col-lg-3 bg-white rounded-5 m-5" style="overflow: hidden;">
+                            <div class="container">
+                                <img class="w-100 p-3 rounded-5" style="height: 300px;" src="./img/YSL.jpg" alt="">
+                                <h4 class="text-center mt-2">YSL</h4>
+                                <span class="fs-5 my-2">$1500</span>
+                            </div>
+                            <button class="w-100 fs-5 py-2 rounded-5 my-3" onclick="addToCart('YSL' ,1500, './img/YSL.jpg')">
+                                buy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <div class="card text-center position-fixed top-50 start-50 translate-middle p-4 shadow-lg d-none w-25 h-25" id="box">
+        <div>
+            <h4 class="text-center my-4">Add this Product to cart?</h4>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-danger" onclick="cancel()">Cancel</button>
+                <button class="btn btn-outline-success" onclick="add()">Add</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let btn1 = document.querySelector("#btn1");
+        let btn2 = document.querySelector("#btn2");
+        let btn3 = document.querySelector("#btn3");
+
+        let bag = document.querySelector("#bagsection");
+        let clothes = document.querySelector("#clothessection");
+        let perfum = document.querySelector("#perfumsection");
+
+        btn1.addEventListener('click' ,function(){
+            bag.style.display="block";
+            clothes.style.display="none";
+            perfum.style.display="none";
+
+            btn1.style.backgroundColor="#F7D1C6";
+            btn1.style.color="#FFFFFF";
+            btn1.style.boxShadow="none";
+
+            btn2.style.backgroundColor="#FFFFFF";
+            btn2.style.color="#F7D1C6";
+            btn2.style.boxShadow="-2px 2px 5px black";
+
+            btn3.style.backgroundColor="#FFFFFF";
+            btn3.style.color="#F7D1C6";
+            btn3.style.boxShadow="-2px 2px 5px black";
+
+        })
+        btn2.addEventListener('click' ,function(){
+            bag.style.display="none";
+            clothes.style.display="block";
+            perfum.style.display="none";
+
+            btn2.style.backgroundColor="#F7D1C6";
+            btn2.style.color="#FFFFFF";
+            btn2.style.boxShadow="none";
+
+            btn1.style.backgroundColor="#FFFFFF";
+            btn1.style.color="#F7D1C6";
+            btn1.style.boxShadow="-2px 2px 5px black";
+
+            btn3.style.backgroundColor="#FFFFFF";
+            btn3.style.color="#F7D1C6";
+            btn3.style.boxShadow="-2px 2px 5px black";
+
+        })
+        btn3.addEventListener('click' ,function(){
+            bag.style.display="none";
+            clothes.style.display="none";
+            perfum.style.display="block";
+
+            btn3.style.backgroundColor="#F7D1C6";
+            btn3.style.color="#FFFFFF";
+            btn3.style.boxShadow="none";
+
+            btn2.style.backgroundColor="#FFFFFF";
+            btn2.style.color="#F7D1C6";
+            btn2.style.boxShadow="-2px 2px 5px black";
+
+            btn1.style.backgroundColor="#FFFFFF";
+            btn1.style.color="#F7D1C6";
+            btn1.style.boxShadow="-2px 2px 5px black"
+
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
